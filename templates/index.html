@@ -1,27 +1,55 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <title>Página Inicial</title>
-    <script>
-        // função para redirecionar para a página selecionada
-        function redirecionarParaPagina() {
-            var pagina = document.getElementById("menuPaginas").value;
-            window.location.href = pagina;
-        }
-    </script>
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Seu Título Aqui</title>
+        <link rel="stylesheet" href="/static/css/estilo.css">
+    </head>
 <body>
-    <h1>Bem-vindo à página</h1>
-    <p>Esta é uma página HTML básica em português.</p>
-    
+
+<header>
+    <h1>Resumo de Discursos Políticos com IA</h1>
+</header>
+<div>
     <!-- Dropdown menu para seleção das páginas -->
     <select id="menuPaginas" onchange="redirecionarParaPagina()">
-        <option value="">Selecione uma Página</option>
-        <option value="/infos">Informações</option>
-        <option value="/projetos">Projetos (GitHub)</option>
-        <option value="/publicacoes">Publicações</option>
+        <option value="">Selecione um Deputado</option>
+        <option value="/tabataamaral">Tabata Amaral</option>
+        <option value="/nikolasferreira">Nikolas Ferreira</option>
+        <option value="/guilhermeboulos">Guilherme Boulos</option>
     </select>
+</div>
+
+<!-- Conteúdo da home reformulado -->
+<div class="container">
+    <div class="sobre">
+        <h2>Sobre o Projeto</h2>
+        <p>Bem-vindo ao Resumo de Discursos Políticos com IA, um serviço inovador que utiliza inteligência artificial para sintetizar os principais pontos de discursos políticos no Brasil. Aqui você pode acessar resumos claros e objetivos dos discursos de diversos deputados federais, facilitando o entendimento das principais discussões políticas do país.</p>
+    </div>
+
+    <div class="como-funciona">
+        <h2>Como Funciona</h2>
+        <p>Selecione um deputado no menu acima para acessar resumos dos seus discursos mais recentes. Nosso sistema de IA analisa o conteúdo dos discursos e gera resumos que destacam as principais informações, mantendo você informado sobre as posições e propostas dos representantes políticos do Brasil.</p>
+    </div>
+
+    <div class="tecnologia">
+        <h2>Tecnologia</h2>
+        <p>Nosso serviço utiliza as mais recentes tecnologias de processamento de linguagem natural para garantir resumos precisos e de fácil compreensão. Desenvolvido por especialistas em IA, nosso sistema está em constante evolução para melhor atender às suas necessidades de informação política.</p>
+    </div>
+</div>
+    
+<footer>
+    <p>&copy; 2024 Resumo de Discursos Políticos com IA</p>
+</footer>
+
+<script>
+    function redirecionarParaPagina() {
+        var pagina = document.getElementById("menuPaginas").value;
+        window.location.href = pagina;
+    }
+</script>
+
 
 </body>
 </html>

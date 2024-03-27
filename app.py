@@ -6,17 +6,17 @@ app = Flask(__name__) # Cria uma instância do Flask.
 def index():
     return render_template('index.html') # Renderiza o template index.html, localizado na pasta templates
 
-@app.route("/infos")
+@app.route("/tabataamaral")
 def infos():
- return render_template('infos.html')
+ return render_template('tabataamaral.html')
 
-@app.route("/projetos")
+@app.route("/guilhermeboulos")
 def projetos():
- return render_template('projetos.html')
+ return render_template('guilhermeboulos.html')
 
-@app.route("/publicacoes")
+@app.route("/nikolasferreira")
 def publicacoes():
- return render_template('publicacoes.html')
+ return render_template('nikolasferreira.html')
 
 if __name__ == '__main__':
   app.run(port=5000, debug=True) # Inicia o servidor na porta 5000. "Debug" é uma configuração para facilitar o desenvolvimento.
