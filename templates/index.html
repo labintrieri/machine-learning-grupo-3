@@ -5,12 +5,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Resumo de Discursos dos Deputados</title>
     <link rel="stylesheet" href="/static/css/estilo.css">
+    <style>
+        /* CSS para posicionar as imagens lado a lado */
+        #imagens-deputados {
+            display: flex;
+            justify-content: space-between;
+        }
+        #imagens-deputados img {
+            max-width: 25%; /* Ajuste a largura das imagens conforme necessário */
+        }
+    </style>
 </head>
 
 <body>
     <header>
-        <h1>Resumo de Discursos dos Deputados</h1>
+        <h1>Resumo de Discursos dos Deputados Federais</h1>
     </header>
+
+    <!-- Adicionando as imagens dos deputados -->
+    <div id="imagens-deputados">
+        <img src="https://www.camara.leg.br/internet/bancoimagem/banco/2024/03/img20240320215313726MED.jpg" alt="Tabata Amaral">
+        <img src="https://www.camara.leg.br/internet/bancoimagem/banco/2024/03/img20240319210842194MED.jpg" alt="Nikolas Ferreira">
+        <img src="https://www.camara.leg.br/internet/bancoimagem/banco/2023/12/img20231213224210328MED.jpg" alt="Guilherme Boulos">
+        <img src="https://www.camara.leg.br/internet/bancoimagem/banco/2024/03/img20240320162030240MED.jpg" alt="Eduardo Bolsonaro">
+    </div>
 
     <section id="sobre">
         <h2>Sobre o Projeto</h2>
@@ -21,7 +39,7 @@
             O objetivo é facilitar o acesso e a compreensão da atividade parlamentar, oferecendo uma ferramenta que destila informações essenciais dos discursos dos deputados federais. Acreditamos que isso contribui para uma maior transparência e engajamento cívico.
         </p>
         <p>
-            Você pode escolher o deputado desejado no menu abaixo e ter acesso aos resumos de seus discursos mais recentes, além de informações adicionais relevantes.
+        Neste site você vai encontrar resumos de discursos realizados pelos dez deputados federais mais votados do Brasil nas eleições de 2022. Os discursos coletados são referentes ao ano de 2023. No menu abaixo, o usuário pode escolher o deputado desejado e ter acesso aos resumos de seus discursos mais recentes, além de informações relevantes adicionais.
         </p>
     </section>
 
@@ -43,8 +61,16 @@
         </select>
     </section>
     
+
+    <section id="Nota">
+        <h2>Nota de aviso</h2>
+        <p>
+            A busca pelo Delegado Bruno Lima (PP), sexto deputado mais votado no país, irá retorna sem discursos, pois em janeiro de 2023 o político assumiu o comando da secretaria de Inovação e Tecnologia da cidade de São Paulo. No lugar de Deltan Dallagnol, sétimo deputado mais bem votado no país que foi cassado e perdeu o mandato, está o deputado Luiz Carlos Haluy. 
+        </p>
+    </section>
+
     <footer>
-        <p>&copy; 2024 Resumo de Discursos dos Deputados. Todos os direitos reservados.</p>
+        <p>&copy; 2024 Resumo de Discursos dos Deputados Federais. Todos os direitos reservados.</p>
     </footer>
 
     <script>
