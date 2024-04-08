@@ -9,6 +9,8 @@ from flask import Flask, render_template, request, redirect, url_for
 app = Flask(__name__) # Cria uma instância do Flask. 
 from pymongo import MongoClient
 import os
+from datetime import datetime
+
 
 mongodb_uri = os.getenv('MONGO_URI')
 db_name = os.getenv('MONGO_ID')
@@ -101,6 +103,14 @@ def luizcarloshauly():
         return render_template('luizcarloshauly.html', documentos=documentos)
     else:
         return "Informações do deputado Luiz Carlos Hauly não encontradas", 404
+    
+@app.template_filter('formatar_data')
+def formatar_data_filter(data_str):
+    formato_original = "%Y-%m-%dT%H:%M"
+    formato_novo = "%d de %B de %Y"
+    data = datetime.strptime(data_str, formato_original)
+    return data.strftime(formato_novo)
+
 
 if __name__ == '__main__':
   app.run(port=5000, debug=True) # Inicia o servidor na porta 5000. "Debug" é uma configuração para facilitar o desenvolvimento.
