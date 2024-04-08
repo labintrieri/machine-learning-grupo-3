@@ -20,17 +20,15 @@
         <p>Nesta página, você encontrará resumos dos discursos de Guilherme Boulos, elaborados através de inteligência artificial para destacar seus principais pontos e propostas. Acompanhe para entender mais sobre suas visões e ações políticas.</p>
     </div>
     
-    <div class="discursos">
-        <h2>Discursos Recentes</h2>
-        <!-- Exemplos de discursos com placeholders para resumos -->
-        <div class="discurso">
-            <h3>Título do Discurso 1</h3>
-            <p>Resumo do discurso 1...</p>
-        </div>
-        <div class="discurso">
-            <h3>Título do Discurso 2</h3>
-            <p>Resumo do discurso 2...</p>
-        </div>
+    <div class="resumos">
+        <h2>Resumos</h2>
+        {% for deputado in documentos %}
+            <div class="resumo">
+                <h3>Resumo</h3>
+                <p>{{ deputado.resumo }}</p>
+                <p>{{ deputado.data }}</p>
+            </div>
+        {% endfor %}
     </div>
 </div>
 

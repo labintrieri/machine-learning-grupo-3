@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Seu Título Aqui</title>
+        <link rel="stylesheet" href="/static/css/estilo.css">
+</head>
+<body>
+<header>
+    <h1>Resumo de Discursos Políticos com IA</h1>
+</header>
+
+<div class="container">
+    <div class="biografia">
+        <h2>Ricardo Salles</h2>
+        <img src="https://www.camara.leg.br/internet/bancoimagem/banco/2024/03/img20240319203132822MED.jpg" alt="Ricardo Salles" width="200" style="float:left; margin-right:20px;">
+        <p>Ricardo Salles é um político e advogado brasileiro filiado ao Partido Liberal (PL). Ele é conhecido por sua atuação em pautas relacionadas à área ambiental, defendendo especialmente políticas de desenvolvimento econômico e ambiental equilibrado.</p>
+        <p>Nascido em São Paulo em 1975, Salles é formado em Direito pela Universidade Presbiteriana Mackenzie. Ele foi ministro do Meio Ambiente do Brasil de 2019 a 2021, durante o governo de Jair Bolsonaro, período em que tomou medidas consideradas polêmicas por ambientalistas e pela imprensa. Atualmente, ele é Deputado Federal por São Paulo.</p>
+        <p>Nesta página, você encontrará resumos dos discursos de Ricardo Salles, elaborados através de inteligência artificial para destacar seus principais pontos e propostas. Acompanhe para entender mais sobre suas visões e ações políticas.</p>
+    </div>
+    
+    <div class="resumos">
+        <h2>Resumos</h2>
+        {% for deputado in documentos %}
+            <div class="resumo">
+                <h3>Resumo</h3>
+                <p>{{ deputado.resumo }}</p>
+                <p>{{ deputado.data }}</p>
+            </div>
+        {% endfor %}
+    </div>
+</div>
+
+<footer>
+    <p>&copy; 2024 Resumo de Discursos Políticos com IA</p>
+</footer>
+
+</body>
+</html>

@@ -1,22 +1,55 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Seu Título Aqui</title>
-        <link rel="stylesheet" href="/static/css/estilo.css">
-    </head>
-<body>
-    <h1>Bem-vindo à página</h1>
-    <p>Esta é uma página HTML básica em português.</p>
-    
-    <!-- Dropdown menu para seleção das páginas -->
-    <select id="menuPaginas" onchange="redirecionarParaPagina()">
-        <option value="">Selecione um Deputado</option>
-        <option value="/tabataamaral">Tabata Amaral</option>
-        <option value="/nikolasferreira">Nikolas Ferreira</option>
-        <option value="/guilhermeboulos">Guilherme Boulos</option>
-    </select>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resumo de Discursos dos Deputados</title>
+    <link rel="stylesheet" href="/static/css/estilo.css">
+</head>
 
+<body>
+    <header>
+        <h1>Resumo de Discursos dos Deputados</h1>
+    </header>
+
+    <section id="sobre">
+        <h2>Sobre o Projeto</h2>
+        <p>
+            Este projeto é fruto do desenvolvimento em conjunto de estudantes do Master em Jornalismo de Dados do Insper. Utilizamos a API da Câmara dos Deputados para coletar discursos dos parlamentares, aplicando técnicas de Inteligência Artificial para resumir as falas e extrair palavras-chave, nomes próprios e localidades citadas.
+        </p>
+        <p>
+            O objetivo é facilitar o acesso e a compreensão da atividade parlamentar, oferecendo uma ferramenta que destila informações essenciais dos discursos dos deputados federais. Acreditamos que isso contribui para uma maior transparência e engajamento cívico.
+        </p>
+        <p>
+            Você pode escolher o deputado desejado no menu abaixo e ter acesso aos resumos de seus discursos mais recentes, além de informações adicionais relevantes.
+        </p>
+    </section>
+
+    <section id="selecao-deputado">
+        <h2>Selecionar Deputado</h2>
+        <!-- Dropdown menu para seleção das páginas -->
+        <select id="menuPaginas" onchange="redirecionarParaPagina()">
+            <option value="">Selecione um Deputado</option>
+            <option value="/tabataamaral">Tabata Amaral</option>
+            <option value="/nikolasferreira">Nikolas Ferreira</option>
+            <option value="/guilhermeboulos">Guilherme Boulos</option>
+            <option value="/carlazambelli">Carla Zambelli</option>
+            <option value="/eduardobolsonaro">Eduardo Bolsonaro</option>
+            <option value="/ricardosalles">Ricardo Salles</option>
+        </select>
+    </section>
+    
+    <footer>
+        <p>&copy; 2024 Resumo de Discursos dos Deputados. Todos os direitos reservados.</p>
+    </footer>
+
+    <script>
+        function redirecionarParaPagina() {
+            var paginaSelecionada = document.getElementById("menuPaginas").value;
+            if (paginaSelecionada) {
+                window.location.href = paginaSelecionada;
+            }
+        }
+    </script>
 </body>
 </html>

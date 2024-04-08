@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Seu Título Aqui</title>
+        <link rel="stylesheet" href="/static/css/estilo.css">
+</head>
+<body>
+<header>
+    <h1>Resumo de Discursos Políticos com IA</h1>
+</header>
+
+<div class="container">
+    <div class="biografia">
+        <h2>Eduardo Bolsonaro</h2>
+        <img src="https://www.camara.leg.br/internet/bancoimagem/banco/2024/03/img20240320162030240MED.jpg" alt="Eduardo Bolsonaro" width="200" style="float:left; margin-right:20px;">
+        <p>Eduardo Bolsonaro é um político do Partido Liberal (PL), policial e advogado brasileiro, conhecido por apoiar a flexibilização do porte de armas, a redução da maioridade penal e o combate ao comunismo.</p>
+        <p>Nascido no Rio de Janeiro em 1984, Bolsonaro é formado em Direito pela Universidade Federal do Rio de Janeiro (UFRJ). Conhecido por suas posições conservadoras e por apoiar o governo de seu pai, o presidente Jair Bolsonaro, Eduardo ingressou na política em 2015, quando foi eleito deputado federal por São Paulo pelo Partido Social Liberal (PSL). Se tornando um expoente da direita brasileira, foi reeleito em 2018 com 1 843 735 votos, sendo o mais votado da história do Brasil naquele ano. </p>
+        <p>Nesta página, você encontrará resumos dos discursos de Eduardo Bolsonaro, elaborados através de inteligência artificial para destacar seus principais pontos e propostas. Acompanhe para entender mais sobre suas visões e ações políticas.</p>
+    </div>
+    
+    <div class="resumos">
+        <h2>Resumos</h2>
+        {% for deputado in documentos %}
+            <div class="resumo">
+                <h3>Resumo</h3>
+                <p>{{ deputado.resumo }}</p>
+                <p>{{ deputado.data }}</p>
+            </div>
+        {% endfor %}
+    </div>
+</div>
+
+<footer>
+    <p>&copy; 2024 Resumo de Discursos Políticos com IA</p>
+</footer>
+
+</body>
+</html>
