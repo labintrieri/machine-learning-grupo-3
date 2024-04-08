@@ -10,9 +10,6 @@ app = Flask(__name__) # Cria uma instância do Flask.
 from pymongo import MongoClient
 import os
 from datetime import datetime
-import locale
-
-locale.setlocale(locale.LC_TIME, 'pt_BR.utf8')
 
 
 
@@ -108,12 +105,15 @@ def luizcarloshauly():
     else:
         return "Informações do deputado Luiz Carlos Hauly não encontradas", 404
     
+
 @app.template_filter('formatar_data')
 def formatar_data_filter(data_str):
+    meses = ["janeiro", "fevereiro", "março", "abril", "maio", "junho",
+             "julho", "agosto", "setembro", "outubro", "novembro", "dezembro"]
     formato_original = "%Y-%m-%dT%H:%M"
-    formato_novo = "%d de %B de %Y"
     data = datetime.strptime(data_str, formato_original)
-    return data.strftime(formato_novo)
+    return f"{data.day} de {meses[data.month-1]} de {data.year}"
+
 
 
 if __name__ == '__main__':
