@@ -22,12 +22,11 @@
     <div class="resumos">
         <h2>Resumos</h2>
         {% for deputado in documentos %}
-            <div class="resumo">
-                <h3>Resumo</h3>
-                <p>{{ deputado.resumo }}</p>
-                <p>{{ deputado.data }}</p>
-            </div>
-        {% endfor %}
+        <div class="resumo">
+        <h3>{{ deputado.data | formatar_data }}</h3>
+            <p>{{ deputado.resumo }}</p>
+        </div>
+    {% endfor %}    
     </div>
 </div>
 

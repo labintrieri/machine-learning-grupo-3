@@ -10,6 +10,10 @@ app = Flask(__name__) # Cria uma instância do Flask.
 from pymongo import MongoClient
 import os
 from datetime import datetime
+import locale
+
+locale.setlocale(locale.LC_TIME, 'pt_BR.utf8')
+
 
 
 mongodb_uri = os.getenv('MONGO_URI')
