@@ -1,5 +1,5 @@
-flask
-openai
-openai-whisper
+Flask>3
+gunicorn
+lxml
+requests
 pymongo
-python-dotenv
