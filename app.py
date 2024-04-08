@@ -70,13 +70,13 @@ def ricardosalles():
     else:
         return "Informações do deputado Ricardo Salles não encontradas", 404
     
-@app.route("/brunolima")
-def brunolima():
-    documentos = list(db.resumos_deputados.find({"nome_deputado": "Bruno Lima"}))
+@app.route("/delegadobrunolima")
+def delegadobrunolima():
+    documentos = list(db.resumos_deputados.find({"nome_deputado": "Delegado Bruno Lima"}))
     if documentos:
-        return render_template('brunolima.html', documentos=documentos)
+        return render_template('delegadobrunolima.html', documentos=documentos)
     else:
-        return "Informações do deputado Bruno Lima não encontradas", 404
+        return "Informações do deputado Delegado Bruno Lima não encontradas", 404
 
 @app.route("/celsorussomanno")
 def celsorussomanno():
