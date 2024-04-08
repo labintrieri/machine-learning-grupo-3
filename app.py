@@ -69,6 +69,38 @@ def ricardosalles():
         return render_template('ricardosalles.html', documentos=documentos)
     else:
         return "Informações do deputado Ricardo Salles não encontradas", 404
+    
+@app.route("/brunolima")
+def brunolima():
+    documentos = list(db.resumos_deputados.find({"nome_deputado": "Bruno Lima"}))
+    if documentos:
+        return render_template('brunolima.html', documentos=documentos)
+    else:
+        return "Informações do deputado Bruno Lima não encontradas", 404
+
+@app.route("/celsorussomanno")
+def celsorussomanno():
+    documentos = list(db.resumos_deputados.find({"nome_deputado": "Celso Russomanno"}))
+    if documentos:
+        return render_template('celsorussomanno.html', documentos=documentos)
+    else:
+        return "Informações do deputado Celso Russomanno não encontradas", 404
+
+@app.route("/kimkataguiri")
+def kimkataguiri():
+    documentos = list(db.resumos_deputados.find({"nome_deputado": "Kim Kataguiri"}))
+    if documentos:
+        return render_template('kimkataguiri.html', documentos=documentos)
+    else:
+        return "Informações do deputado Kim Kataguiri não encontradas", 404
+
+@app.route("/luizcarloshauly")
+def luizcarloshauly():
+    documentos = list(db.resumos_deputados.find({"nome_deputado": "Luiz Carlos Hauly"}))
+    if documentos:
+        return render_template('luizcarloshauly.html', documentos=documentos)
+    else:
+        return "Informações do deputado Luiz Carlos Hauly não encontradas", 404
 
 if __name__ == '__main__':
   app.run(port=5000, debug=True) # Inicia o servidor na porta 5000. "Debug" é uma configuração para facilitar o desenvolvimento.

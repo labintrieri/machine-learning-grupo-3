@@ -1,0 +1,41 @@
+<html lang="pt-BR">
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Seu Título Aqui</title>
+        <link rel="stylesheet" href="/static/css/estilo.css">
+</head>
+<body>
+<header>
+    <h1>Resumo de Discursos Políticos com IA</h1>
+</header>
+
+<div class="container">
+    <div class="biografia">
+        <h2>Luiz Carlos Hauly</h2>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/1/11/Luiz_Carlos_Hauly_%28cropped%29.png" alt="Luiz Carlos Hauly" width="200" style="float:left; margin-right:20px;">
+        <p> Luiz Carlos Hauly assumiu em junho de 2023 a cadeira da Câmara dos Deputados que foi deixada por Deltan Dallagnol, que teve o mandato cassado. 
+</p>
+       <p> Hauly, de 72 anos, é natural do Paraná e é professor, profissional de educação física, economista e político e esse é o seu oitavo mandato como deputado federal. Hauly já foi por duas vezes secretário da Fazenda do Paraná.
+</p>
+        <p>Nesta página, você encontrará resumos dos discursos de Luiz Carlos Hauly, elaborados através de inteligência artificial para destacar seus principais pontos e propostas. Acompanhe para entender mais sobre suas visões e ações políticas.</p>
+    </div>
+    
+    <div class="resumos">
+        <h2>Resumos</h2>
+        {% for deputado in documentos %}
+            <div class="resumo">
+                <h3>Resumo</h3>
+                <p>{{ deputado.resumo }}</p>
+                <p>{{ deputado.data }}</p>
+            </div>
+        {% endfor %}
+    </div>
+</div>
+
+<footer>
+    <p>&copy; 2024 Resumo de Discursos Políticos com IA</p>
+</footer>
+
+</body>
+</html>

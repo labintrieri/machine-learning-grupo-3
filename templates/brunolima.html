@@ -1,0 +1,41 @@
+<html lang="pt-BR">
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Seu Título Aqui</title>
+        <link rel="stylesheet" href="/static/css/estilo.css">
+</head>
+<body>
+<header>
+    <h1>Resumo de Discursos Políticos com IA</h1>
+</header>
+
+<div class="container">
+    <div class="biografia">
+        <h2>Delegado Bruno Lima</h2>
+        <img src="https://www3.al.sp.gov.br/repositorio/noticia/N-09-2019/fg238945.jpg" alt="Delegado Bruno Lima" width="200" style="float:left; margin-right:20px;">
+        <p>Bruno Lima surge como delegado da Polícia Civil de São Paulo e fica conhecido por lidar com casos de maus-tratos animal e tráfico de animais silvestres. Em 2018 foi eleito deputado estadual por São Paulo e em 2022 se elegeu deputado federal. 
+</p>
+       <p>Bruno Lima, 37 anos, nasceu na Zona Norte de São Paulo. Iniciou a carreira como estudante de direito aos 17 anos de idade e aos 26 anos, já formado, passou em concurso público e tomou posse como delegado de polícia. Depois que foi eleito deputado federal, o delegado se licenciou do cargo para assumir o cargo de Secretário Municipal de Tecnologia e Inovação de São Paulo.
+</p>
+        <p>Nesta página, você encontrará resumos dos discursos de Bruno Lima, elaborados através de inteligência artificial para destacar seus principais pontos e propostas. Acompanhe para entender mais sobre suas visões e ações políticas.</p>
+    </div>
+    
+    <div class="resumos">
+        <h2>Resumos</h2>
+        {% for deputado in documentos %}
+            <div class="resumo">
+                <h3>Resumo</h3>
+                <p>{{ deputado.resumo }}</p>
+                <p>{{ deputado.data }}</p>
+            </div>
+        {% endfor %}
+    </div>
+</div>
+
+<footer>
+    <p>&copy; 2024 Resumo de Discursos Políticos com IA</p>
+</footer>
+
+</body>
+</html>

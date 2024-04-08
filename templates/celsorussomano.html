@@ -1,0 +1,41 @@
+<html lang="pt-BR">
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Seu Título Aqui</title>
+        <link rel="stylesheet" href="/static/css/estilo.css">
+</head>
+<body>
+<header>
+    <h1>Resumo de Discursos Políticos com IA</h1>
+</header>
+
+<div class="container">
+    <div class="biografia">
+        <h2>Celso Russomanno</h2>
+        <img src="https://www.camara.leg.br/internet/bancoimagem/banco/2023/09/img20230919203530806MED.jpg" alt="Celso Russomanno" width="200" style="float:left; margin-right:20px;">
+        <p>Celso Russomanno é um político, jornalista e bacharel em direito. Filiado ao Republicanos, partido ligado à igreja Universal, Russomanno está em seu sétimo mandato como deputado federal. 
+</p>
+       <p>Nascido em São Paulo em 1956, Russomanno ficou conhecido na televisão por defender o direito do consumidor. Apresentador licenciado da emissora Record, o político apresenta o programa Patrulha do Consumidor, que busca solucionar casos de pessoas que não tiveram seus direitos assegurados em uma relação de consumo.
+</p>
+        <p>Nesta página, você encontrará resumos dos discursos de Celso Russomanno, elaborados através de inteligência artificial para destacar seus principais pontos e propostas. Acompanhe para entender mais sobre suas visões e ações políticas.</p>
+    </div>
+    
+    <div class="resumos">
+        <h2>Resumos</h2>
+        {% for deputado in documentos %}
+            <div class="resumo">
+                <h3>Resumo</h3>
+                <p>{{ deputado.resumo }}</p>
+                <p>{{ deputado.data }}</p>
+            </div>
+        {% endfor %}
+    </div>
+</div>
+
+<footer>
+    <p>&copy; 2024 Resumo de Discursos Políticos com IA</p>
+</footer>
+
+</body>
+</html>
